@@ -177,7 +177,7 @@ class ProductDetailsScreen extends StatelessWidget {
                   SizedBox(height: 16.h),
 
                   Text(
-                    'description'.tr(),
+                    LocaleKeys.description.tr(),
                     style: TextStyle(
                       fontSize: 20.sp,
                       fontWeight: FontWeight.bold,

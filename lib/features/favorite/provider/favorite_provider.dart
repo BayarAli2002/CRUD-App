@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 class FavoriteProvider extends ChangeNotifier {
   final Dio _dio = Dio();
 
-
   final List<ProductModel> _favoriteProducts = [];
+
   List<ProductModel> get favoriteProducts => _favoriteProducts;
 
   // Fetch all favorites from the API
@@ -19,7 +19,9 @@ class FavoriteProvider extends ChangeNotifier {
         _favoriteProducts.clear();
 
         // Each favorite item contains favorite_id and product info including id
-        _favoriteProducts.addAll(data.map((json) => ProductModel.fromJson(json)).toList());
+        _favoriteProducts.addAll(
+          data.map((json) => ProductModel.fromJson(json)).toList(),
+        );
 
         notifyListeners();
       }
@@ -33,10 +35,14 @@ class FavoriteProvider extends ChangeNotifier {
     final isAlreadyFavorite = _favoriteProducts.any((p) => p.id == product.id);
     if (!isAlreadyFavorite) {
       try {
-        final response = await _dio.post(EndPoints.addFavoriteProduct, data: {
-          ...product.toJson(),
-          'productId': product.id,  // you can include productId for clarity if API expects it
-        });
+        final response = await _dio.post(
+          EndPoints.addFavoriteProduct,
+          data: {
+            ...product.toJson(),
+            'productId': product.id,
+            // you can include productId for clarity if API expects it
+          },
+        );
 
         if (response.statusCode == 201) {
           final addedFavorite = ProductModel.fromJson(response.data);
@@ -55,7 +61,9 @@ class FavoriteProvider extends ChangeNotifier {
       // Find favorite by product ID
       final favorite = _favoriteProducts.firstWhere((p) => p.id == productId);
       if (favorite.favoriteId != null && favorite.favoriteId!.isNotEmpty) {
-        final response = await _dio.delete('${EndPoints.deleteFavoriteProduct}/${favorite.favoriteId}');
+        final response = await _dio.delete(
+          '${EndPoints.deleteFavoriteProduct}/${favorite.favoriteId}',
+        );
         if (response.statusCode == 200 || response.statusCode == 204) {
           _favoriteProducts.removeWhere((p) => p.id == productId);
           notifyListeners();

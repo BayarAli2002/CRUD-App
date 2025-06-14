@@ -53,7 +53,8 @@ class CodegenLoader extends AssetLoader{
   "favorite_added": "تمت الإضافة إلى المفضلة",
   "favoriteEmpty": "لا توجد مفضلات حتى الآن",
   "your_product_manager": "مدير المنتجات الخاص بك",
-  "description": "الوصف"
+  "description": "الوصف",
+  "bayar": "Bayar"
 };
 static const Map<String,dynamic> _en = {
   "appName": "CRUD App",
@@ -66,7 +67,7 @@ static const Map<String,dynamic> _en = {
   "productDeleted": "Product Deleted",
   "updateProductButtonText": "Update Product",
   "productAdded": "Product Added",
-  "addFalied": "Add failed:",
+  "addFailed": "Add failed:",
   "enterProductId": "Enter product ID to update",
   "productUpdated": "Product updated",
   "updateFailed": "Product Failed",
@@ -95,7 +96,8 @@ static const Map<String,dynamic> _en = {
   "favorite_added": "Favorite added",
   "favoriteEmpty": "No favorites yet",
   "your_product_manager": "Your Product Manager",
-  "description": "Description"
+  "description": "Description",
+  "bayar": "Bayar"
 };
 static const Map<String,dynamic> _fa = {
   "appName": "ئاپی CRUD",
@@ -136,7 +138,8 @@ static const Map<String,dynamic> _fa = {
   "favorite_added": "هاوڕێ زیادکرا",
   "favoriteEmpty": "هێشتا هەیچ هاوڕێیەک نیە",
   "your_product_manager": "بەڕێوبەری بەرهەمەکانت",
-  "description": "وەسف"
+  "description": "وەسف",
+  "bayar": "Bayar"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": _ar, "en": _en, "fa": _fa};
 }

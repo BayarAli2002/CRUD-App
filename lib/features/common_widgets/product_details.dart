@@ -3,12 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:shimmer/shimmer.dart';
 
-
-
 import '../home/model/product_model.dart';
 import '../home/view/product_details/product_details_screen.dart';
 import '../home/view/widgets/delete_button.dart';
-import 'favorite_button.dart';
+import 'custom_button.dart';
 import '../home/view/widgets/update_button.dart';
 
 class ProductDetails extends StatelessWidget {
@@ -51,7 +49,9 @@ class ProductDetails extends StatelessWidget {
             Stack(
               children: [
                 ClipRRect(
-                  borderRadius: BorderRadius.vertical(top: Radius.circular(16.r)),
+                  borderRadius: BorderRadius.vertical(
+                    top: Radius.circular(16.r),
+                  ),
                   child: CachedNetworkImage(
                     imageUrl: productModel.image ?? '',
                     width: double.infinity,

@@ -13,12 +13,15 @@ import '../../../favorite/provider/favorite_provider.dart';
 class ProductDetailsScreen extends StatelessWidget {
   final String? productId;
 
-  const ProductDetailsScreen({super.key,  this.productId});
+  const ProductDetailsScreen({super.key, this.productId});
 
   @override
   Widget build(BuildContext context) {
     // Fetch product if not already fetched
-    final productProvider = Provider.of<ProductProvider>(context, listen: false);
+    final productProvider = Provider.of<ProductProvider>(
+      context,
+      listen: false,
+    );
     if (productProvider.selectedProduct?.id != productId) {
       productProvider.fetchProductById(productId ?? '');
     }
@@ -29,11 +32,7 @@ class ProductDetailsScreen extends StatelessWidget {
           final productDetailModel = productProvider.selectedProduct;
 
           if (productDetailModel == null) {
-            return Center(
-              child: CircularProgressIndicator(
-                strokeWidth: 2,
-              ),
-            );
+            return Center(child: CircularProgressIndicator(strokeWidth: 2));
           }
 
           void showFlushbar(String message) {
@@ -60,7 +59,9 @@ class ProductDetailsScreen extends StatelessWidget {
                         // Image Card
                         Card(
                           elevation: 6,
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16.r)),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16.r),
+                          ),
                           clipBehavior: Clip.antiAlias,
                           child: CachedNetworkImage(
                             imageUrl: productDetailModel.image ?? '',
@@ -79,13 +80,16 @@ class ProductDetailsScreen extends StatelessWidget {
                             errorWidget: (context, url, error) => Container(
                               height: 280.h,
                               color: Colors.grey.shade300,
-                              child: const Icon(Icons.broken_image, color: Colors.red, size: 50),
+                              child: const Icon(
+                                Icons.broken_image,
+                                color: Colors.red,
+                                size: 50,
+                              ),
                             ),
                           ),
                         ),
 
                         // Delete button top-left
-
 
                         // Favorite button top-right
                         Positioned(
@@ -97,29 +101,43 @@ class ProductDetailsScreen extends StatelessWidget {
                             child: InkWell(
                               customBorder: const CircleBorder(),
                               onTap: () async {
-                                final isFav = favoriteProvider.isFavorite(productDetailModel.id ?? '');
+                                final isFav = favoriteProvider.isFavorite(
+                                  productDetailModel.id ?? '',
+                                );
                                 if (isFav) {
-                                  await favoriteProvider.removeFavorite(productDetailModel.id ?? '');
-                                  showFlushbar(LocaleKeys.favorite_removed.tr());
+                                  await favoriteProvider.removeFavorite(
+                                    productDetailModel.id ?? '',
+                                  );
+                                  showFlushbar(
+                                    LocaleKeys.favorite_removed.tr(),
+                                  );
                                 } else {
-                                  await favoriteProvider.addFavorite(productDetailModel);
+                                  await favoriteProvider.addFavorite(
+                                    productDetailModel,
+                                  );
                                   showFlushbar(LocaleKeys.favorite_added.tr());
                                 }
                               },
                               child: Padding(
                                 padding: EdgeInsets.all(8.w),
                                 child: Icon(
-                                  favoriteProvider.isFavorite(productDetailModel.id ?? '')
+                                  favoriteProvider.isFavorite(
+                                        productDetailModel.id ?? '',
+                                      )
                                       ? Icons.favorite
                                       : Icons.favorite_border,
-                                  color: favoriteProvider.isFavorite(productDetailModel.id ?? '') ? Colors.red : Colors.white,
+                                  color:
+                                      favoriteProvider.isFavorite(
+                                        productDetailModel.id ?? '',
+                                      )
+                                      ? Colors.red
+                                      : Colors.white,
                                   size: 28.sp,
                                 ),
                               ),
                             ),
                           ),
                         ),
-
                       ],
                     ),
                   ),
@@ -142,7 +160,10 @@ class ProductDetailsScreen extends StatelessWidget {
                       ),
 
                       Container(
-                        padding: EdgeInsets.symmetric(horizontal: 14.w, vertical: 6.h),
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 14.w,
+                          vertical: 6.h,
+                        ),
                         decoration: BoxDecoration(
                           color: Colors.teal.shade600,
                           borderRadius: BorderRadius.circular(20.r),
@@ -196,7 +217,8 @@ class ProductDetailsScreen extends StatelessWidget {
                     ),
                   ),
 
-                  SizedBox(height: 80.h), // Add some bottom padding for FAB space
+                  SizedBox(height: 80.h),
+                  // Add some bottom padding for FAB space
                 ],
               ),
             ],

@@ -9,7 +9,7 @@
   "productDeleted": "Product Deleted",
   "updateProductButtonText": "Update Product",
   "productAdded": "Product Added",
-  "addFalied": "Add failed:",
+  "addFailed": "Add failed:",
   "enterProductId": "Enter product ID to update",
   "productUpdated": "Product updated",
   "updateFailed": "Product Failed",
@@ -38,5 +38,6 @@
   "favorite_added": "Favorite added",
   "favoriteEmpty": "No favorites yet",
   "your_product_manager": "Your Product Manager",
-  "description": "Description"
+  "description": "Description",
+  "bayar": "Bayar"
 }

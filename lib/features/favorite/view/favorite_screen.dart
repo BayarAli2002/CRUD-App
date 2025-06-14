@@ -8,7 +8,6 @@ import '../../../translations/local_keys.g.dart';
 import '../../common_widgets/product_details.dart';
 import '../provider/favorite_provider.dart';
 
-
 class FavoriteScreen extends StatelessWidget {
   const FavoriteScreen({super.key});
 
@@ -19,30 +18,30 @@ class FavoriteScreen extends StatelessWidget {
 
     return favoriteProducts.isEmpty
         ? Center(
-      child: Text(
-        LocaleKeys.favoriteEmpty.tr(),
-        style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-      ),
-    )
+            child: Text(
+              LocaleKeys.favoriteEmpty.tr(),
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+          )
         : ListView.builder(
-      padding: EdgeInsets.all(12.w),
-      itemCount: favoriteProducts.length,
-      itemBuilder: (ctx, index) {
-        final favoriteModel = favoriteProducts[index];
-        return ProductDetails(
-          productModel: favoriteModel,
-          showFlushbar: (message) {
-            Flushbar(
-              message: message,
-              duration: const Duration(seconds: 3),
-              flushbarPosition: FlushbarPosition.TOP,
-              backgroundColor: Colors.black87,
-              margin: const EdgeInsets.all(8),
-              borderRadius: BorderRadius.circular(8),
-            ).show(context);
-          },
-        );
-      },
-    );
+            padding: EdgeInsets.all(12.w),
+            itemCount: favoriteProducts.length,
+            itemBuilder: (ctx, index) {
+              final favoriteModel = favoriteProducts[index];
+              return ProductDetails(
+                productModel: favoriteModel,
+                showFlushbar: (message) {
+                  Flushbar(
+                    message: message,
+                    duration: const Duration(seconds: 3),
+                    flushbarPosition: FlushbarPosition.TOP,
+                    backgroundColor: Colors.black87,
+                    margin: const EdgeInsets.all(8),
+                    borderRadius: BorderRadius.circular(8),
+                  ).show(context);
+                },
+              );
+            },
+          );
   }
 }

@@ -13,10 +13,12 @@ class BottomNavigationBarScreens extends StatefulWidget {
   const BottomNavigationBarScreens({super.key});
 
   @override
-  State<BottomNavigationBarScreens> createState() => _BottomNavigationBarScreensState();
+  State<BottomNavigationBarScreens> createState() =>
+      _BottomNavigationBarScreensState();
 }
 
-class _BottomNavigationBarScreensState extends State<BottomNavigationBarScreens> {
+class _BottomNavigationBarScreensState
+    extends State<BottomNavigationBarScreens> {
   late PersistentTabController _controller;
 
   @override
@@ -26,10 +28,7 @@ class _BottomNavigationBarScreensState extends State<BottomNavigationBarScreens>
   }
 
   List<Widget> _buildScreens() {
-    return [
-      const HomeScreen(),
-      const FavoriteScreen(),
-    ];
+    return [const HomeScreen(), const FavoriteScreen()];
   }
 
   List<PersistentBottomNavBarItem> _navBarsItems() {
@@ -58,18 +57,19 @@ class _BottomNavigationBarScreensState extends State<BottomNavigationBarScreens>
       appBar: AppBar(
         backgroundColor: Colors.teal.shade300,
         centerTitle: true,
-        title: Text(LocaleKeys.appName.tr(),
+        title: Text(
+          LocaleKeys.appName.tr(),
           style: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.bold),
         ),
         actions: [
           IconButton(
             icon: const Icon(Icons.add),
             onPressed: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => const AddUpdateProductScreen(),
-              ),
-            );
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const AddUpdateProductScreen(),
+                ),
+              );
             },
           ),
         ],
@@ -80,8 +80,9 @@ class _BottomNavigationBarScreensState extends State<BottomNavigationBarScreens>
         controller: _controller,
         screens: _buildScreens(),
         items: _navBarsItems(),
-        navBarStyle: NavBarStyle.style6, // choose the animation style you like
+        navBarStyle: NavBarStyle.style6,
 
+        // choose the animation style you like
         backgroundColor: Colors.teal.shade300,
       ),
     );

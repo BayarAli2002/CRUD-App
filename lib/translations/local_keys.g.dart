@@ -42,5 +42,6 @@ abstract class  LocaleKeys {
   static const favoriteEmpty = 'favoriteEmpty';
   static const your_product_manager = 'your_product_manager';
   static const description = 'description';
+  static const bayar = 'bayar';
 
 }

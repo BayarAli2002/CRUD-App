@@ -6,7 +6,6 @@ import 'package:easy_localization/easy_localization.dart';
 import '../../../../translations/local_keys.g.dart';
 import '../../provider/product_provider.dart';
 
-
 class DeleteButton extends StatelessWidget {
   final String productId;
   final Function(String message) showFlushbar;
@@ -94,11 +93,7 @@ class DeleteButton extends StatelessWidget {
           ],
         ),
         padding: EdgeInsets.all(8.w),
-        child: Icon(
-          Icons.delete_outline,
-          color: Colors.black26,
-          size: 28.sp,
-        ),
+        child: Icon(Icons.delete_outline, color: Colors.black26, size: 28.sp),
       ),
     );
   }

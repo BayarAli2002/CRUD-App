@@ -46,6 +46,7 @@ dependencies:
   persistent_bottom_nav_bar: ^6.2.1
   another_flushbar: ^1.12.30
   flutter_launcher_icons: ^0.14.4
+  logger: ^2.5.0
 
 dev_dependencies:
   flutter_test:
@@ -73,6 +74,7 @@ flutter:
   assets:
      - assets/languages/
      - assets/images/
+     - assets/icons/
 
 flutter_launcher_icons:
   android: true

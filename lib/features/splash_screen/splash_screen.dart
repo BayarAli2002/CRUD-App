@@ -5,7 +5,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../translations/local_keys.g.dart';
 import '../common_widgets/bottom_navigation_bar.dart';
 
-
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 

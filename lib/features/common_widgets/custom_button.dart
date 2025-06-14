@@ -7,7 +7,6 @@ import '../../translations/local_keys.g.dart';
 import '../favorite/provider/favorite_provider.dart';
 import '../home/model/product_model.dart';
 
-
 class FavoriteButton extends StatelessWidget {
   final ProductModel productModel;
   final Function(String message) showFlushBar;

@@ -1,0 +1,142 @@
+// DO NOT EDIT. This is code generated via package:easy_localization/generate.dart
+
+// ignore_for_file: prefer_single_quotes, avoid_renaming_method_parameters, constant_identifier_names
+
+import 'dart:ui';
+
+import 'package:easy_localization/easy_localization.dart' show AssetLoader;
+
+class CodegenLoader extends AssetLoader{
+  const CodegenLoader();
+
+  @override
+  Future<Map<String, dynamic>?> load(String path, Locale locale) {
+    return Future.value(mapLocales[locale.toString()]);
+  }
+
+  static const Map<String,dynamic> _ar = {
+  "appName": "تطبيق CRUD",
+  "addProductButtonText": "إضافة منتج",
+  "textFormFieldTitle": "العنوان",
+  "textFormFieldId": "معرف المنتج (للتحديث)",
+  "textFormFieldPrice": "السعر",
+  "textFormFieldDescription": "الوصف",
+  "textFormFieldImageUrl": "رابط الصورة",
+  "productDeleted": "تم حذف المنتج",
+  "updateProductButtonText": "تحديث المنتج",
+  "productAdded": "تمت إضافة المنتج",
+  "addFalied": "فشل في الإضافة:",
+  "enterProductId": "أدخل معرف المنتج للتحديث",
+  "productUpdated": "تم تحديث المنتج",
+  "updateFailed": "فشل التحديث",
+  "addUpdateScreenAppBarText": "شاشة الإضافة/التحديث",
+  "confirm_delete_title": "تأكيد الحذف",
+  "confirm_delete_message": "هل أنت متأكد أنك تريد حذف هذا المنتج؟",
+  "no": "لا",
+  "yes": "نعم",
+  "product_failed": "فشل المنتج",
+  "product_updated": "تم تحديث المنتج",
+  "enter_product_id_to_update": "أدخل معرف المنتج للتحديث",
+  "add_failed": "فشل الإضافة:",
+  "enter_title": "أدخل العنوان",
+  "enter_price": "أدخل السعر",
+  "enter_description": "أدخل الوصف",
+  "enter_image_url": "أدخل رابط الصورة",
+  "product_added": "تمت إضافة المنتج",
+  "english": "أنكليزي",
+  "arabic": "عربي",
+  "kurdish": "كوردي",
+  "home": "الرئيسية",
+  "favorite": "المفضلة",
+  "add_update": "إضافة / تعديل",
+  "favorite_removed": "تم إزالة المفضلة",
+  "favorite_added": "تمت الإضافة إلى المفضلة",
+  "favoriteEmpty": "لا توجد مفضلات حتى الآن",
+  "your_product_manager": "مدير المنتجات الخاص بك",
+  "description": "الوصف"
+};
+static const Map<String,dynamic> _en = {
+  "appName": "CRUD App",
+  "addProductButtonText": "Add Product",
+  "textFormFieldTitle": "Title",
+  "textFormFieldId": "Product Id (for update)",
+  "textFormFieldPrice": "Price",
+  "textFormFieldDescription": "Description",
+  "textFormFieldImageUrl": "Image URL",
+  "productDeleted": "Product Deleted",
+  "updateProductButtonText": "Update Product",
+  "productAdded": "Product Added",
+  "addFalied": "Add failed:",
+  "enterProductId": "Enter product ID to update",
+  "productUpdated": "Product updated",
+  "updateFailed": "Product Failed",
+  "addUpdateScreenAppBarText": "Add/Update Screen",
+  "confirm_delete_title": "Confirm Delete",
+  "confirm_delete_message": "Are you sure you want to delete this product?",
+  "product_added_to_favorites": "Product added to favorites",
+  "no": "No",
+  "yes": "Yes",
+  "product_failed": "Product Failed",
+  "product_updated": "Product updated",
+  "enter_product_id_to_update": "Enter product ID to update",
+  "add_failed": "Add failed:",
+  "product_added": "Product Added",
+  "enter_title": "Enter title",
+  "enter_price": "Enter price",
+  "enter_description": "Enter description",
+  "enter_image_url": "Enter image URL",
+  "english": "English",
+  "arabic": "Arabic",
+  "kurdish": "Kurdish",
+  "home": "Home",
+  "favorite": "Favorite",
+  "add_update": "Add / Update",
+  "favorite_removed": "Favorite removed",
+  "favorite_added": "Favorite added",
+  "favoriteEmpty": "No favorites yet",
+  "your_product_manager": "Your Product Manager",
+  "description": "Description"
+};
+static const Map<String,dynamic> _fa = {
+  "appName": "ئاپی CRUD",
+  "addProductButtonText": "زیادکردنی کاڵا",
+  "textFormFieldTitle": "ناونیشان",
+  "textFormFieldId": "ناسنامەی کاڵا (بۆ نوێکردنەوە)",
+  "textFormFieldPrice": "نرخ",
+  "textFormFieldDescription": "وەسف",
+  "textFormFieldImageUrl": "بەستەری وێنە",
+  "productDeleted": "کاڵا سڕایەوە",
+  "updateProductButtonText": "نوێکردنەوەی کاڵا",
+  "productAdded": "کاڵا زیادکرا",
+  "addFalied": "زیادکردن سەرکەوتوو نەبوو:",
+  "enterProductId": "ناسنامەی کاڵا داخڵ بکە بۆ نوێکردنەوە",
+  "productUpdated": "کاڵا نوێکرایەوە",
+  "updateFailed": "نوێکردنەوە سەرکەوتوو نەبوو",
+  "addUpdateScreenAppBarText": "پەڕەی زیادکردن/نوێکردنەوە",
+  "confirm_delete_title": "پشتڕاستکردنەوەی سڕینەوە",
+  "confirm_delete_message": "دڵنیایت دەتەوێت ئەم بەرهەمە بسڕیتەوە؟",
+  "no": "نەخێر",
+  "yes": "بەڵێ",
+  "product_failed": "شکستی بەرهەم",
+  "product_updated": "بەرهەم نوێکرایەوە",
+  "enter_product_id_to_update": "ناسنامەی بەرهەم بنووسە بۆ نوێکردنەوە",
+  "add_failed": "زیادکردن شکستی هێنا:",
+  "product_added": "بەرهەم زیادکرا",
+  "enter_title": "ناونیشان بنووسە",
+  "enter_price": "نرخی بنووسە",
+  "enter_description": "وەسف بنووسە",
+  "enter_image_url": "لینکی وێنە بنووسە",
+  "english": "ئینگلیزی",
+  "arabic": "عەرەبی",
+  "kurdish": "کوردی",
+  "home": "ماڵەوە",
+  "favorite": "دڵخواز",
+  "add_update": "زیادکردن / نوێکردنەوە",
+  "favorite_removed": "هاوڕێی لابرا",
+  "favorite_added": "هاوڕێ زیادکرا",
+  "favoriteEmpty": "هێشتا هەیچ هاوڕێیەک نیە",
+  "your_product_manager": "بەڕێوبەری بەرهەمەکانت",
+  "description": "وەسف"
+};
+static const Map<String, Map<String,dynamic>> mapLocales = {"ar": _ar, "en": _en, "fa": _fa};
+}
